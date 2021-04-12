@@ -162,7 +162,7 @@ class Request
         $data            = [];
         $url             = "https://api.bol.com/retailer/content/product";
         $method          = "post";
-        $data["body"]    = $body->__toArray();
+        $data["json"]    = $body->__toArray();
         $data["headers"] = [
             'Accept'       => 'application/vnd.retailer.v5+json',
             'Content-Type' => 'application/vnd.retailer.v5+json',
@@ -724,7 +724,7 @@ class Request
         $data            = [];
         $url             = "https://api.bol.com/retailer/offers";
         $method          = "post";
-        $data["body"]    = $body->__toArray();
+        $data["json"]    = $body->__toArray();
         $data["headers"] = [
             'Accept'       => 'application/vnd.retailer.v5+json',
             'Content-Type' => 'application/vnd.retailer.v5+json',
@@ -1490,7 +1490,7 @@ class Request
         $data            = [];
         $url             = "https://api.bol.com/retailer/process-status";
         $method          = "post";
-        $data["body"]    = $body->__toArray();
+        $data["json"]    = $body->__toArray();
         $data["headers"] = [
             'Accept'       => 'application/vnd.retailer.v5+json',
             'Content-Type' => 'application/vnd.retailer.v5+json',

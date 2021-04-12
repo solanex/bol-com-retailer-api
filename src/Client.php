@@ -325,6 +325,8 @@ class Client
      */
     private function handleRequest($method, $url, $data, array $responseFormat)
     {
+        var_dump($data);
+
         try {
             $result = $this->client->request($method, $url, $data);
         } catch (RequestException $exception) {
@@ -348,6 +350,7 @@ class Client
     {
         if ($responseFormat && isset($responseFormat[$response->getStatusCode()])) {
             $body = json_decode($response->getBody(), true);
+            var_dump($body);
             $result = $this->populator->populate($responseFormat[$response->getStatusCode()], $body);
 
             if ($result instanceof Problem) {

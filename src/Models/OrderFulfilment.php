@@ -52,6 +52,13 @@ final class OrderFulfilment extends AModel
      */
     protected ?string $expiryDate = null;
 
+
+    /**
+     * The timeFrameType field in Get order indicates which delivery time option was selected by the customer during the checkout.
+     * @var string
+     */
+    protected ?string $timeFrameType = null;
+
     public function setDistributionParty(string $distributionParty): self
     {
         $this->_checkEnumBounds($distributionParty, [
